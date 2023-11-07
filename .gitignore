@@ -1,0 +1,6 @@
+build
+fairnr.egg-info
+*.pyc
+*.so
+sample_data
+logs/test_scan_plant_save

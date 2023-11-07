@@ -100,7 +100,7 @@ def my_train():
 
     task = SingleObjRenderingTask(args)
     gpu_id = args.gpu_id.split(',')[0]
-    os.environ['CUDA_VISIBLE_DEVICES'] = gpu_id
+    # os.environ['CUDA_VISIBLE_DEVICES'] = gpu_id
 
     torch.cuda.set_device(int(gpu_id))
 

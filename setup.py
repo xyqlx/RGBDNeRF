@@ -4,7 +4,9 @@ from torch.utils.cpp_extension import BuildExtension, CUDAExtension
 import glob
 
 # build clib
-_ext_src_root = "fairnr/clib"
+# https://github.com/facebookresearch/NSVF/issues/50#issuecomment-976643667
+import os
+_ext_src_root = os.path.join(os.path.dirname(os.path.abspath(__file__)), "fairnr/clib")
 _ext_sources = glob.glob("{}/src/*.cpp".format(_ext_src_root)) + glob.glob(
     "{}/src/*.cu".format(_ext_src_root)
 )
